@@ -1,0 +1,55 @@
+[
+    {
+        "block_key": "block1",
+        "name": "intro",
+        "video": "Attachment_1647157571.mp4",
+        "buttons": [
+            {
+                "key": "button1",
+                "label": "HR Hello",
+                "goto": "block2"
+            }
+        ]
+    },
+    {
+        "block_key": "block2",
+        "name": "intro",
+        "video": "pexels-tima-miroshnichenko-5439073.mp4",
+        "buttons": [
+            {
+                "key": "button2",
+                "label": "Bla Bla",
+                "goto": "block3"
+            },
+            {
+                "key": "button12",
+                "label": "Contribute",
+                "goto": "block3"
+            }
+        ]
+    },
+    {
+        "block_key": "block3",
+        "name": "intro",
+        "video": "pexels-tima-miroshnichenko-5438945.mp4",
+        "buttons": [
+            {
+                "key": "button3",
+                "label": "Welcome",
+                "goto": "block4"
+            }
+        ]
+    },
+    {
+        "block_key": "block4",
+        "name": "intro",
+        "video": "pexels-mart-production-7644020.mp4",
+        "buttons": [
+            {
+                "key": "button1",
+                "label": "Great",
+                "goto": "block4"
+            }
+        ]
+    }
+]

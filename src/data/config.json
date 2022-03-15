@@ -1,37 +1,57 @@
 [
     {
         "block_key": "block2",
-        "name": "intro",
+        "name": "Intro",
         "video": "pexels-tima-miroshnichenko-5439073.mp4",
+        "logo": "logo-dashkit.svg",
         "buttons": [
-            {
-                "key": "button2",
-                "label": "Bla Bla",
-                "goto": "block3"
-            },
             {
                 "key": "button12",
                 "label": "Contribute",
+                "goto": "block3"
+            },
+            {
+                "key": "button15",
+                "label": "Greeting",
+                "goto": "block3"
+            },
+            {
+                "key": "button16",
+                "label": "Welcome",
+                "goto": "block3"
+            },
+            {
+                "key": "button17",
+                "label": "Excellent",
                 "goto": "block3"
             }
         ]
     },
     {
         "block_key": "block3",
-        "name": "intro",
+        "name": "Shipping",
         "video": "pexels-tima-miroshnichenko-5438945.mp4",
+        "logo": "logo-search.png",
         "buttons": [
             {
                 "key": "button3",
                 "label": "Welcome",
-                "goto": "block4"
+                "goto": "block4",
+                "wide": true
+            },
+            {
+                "key": "button31",
+                "label": "Congratelations",
+                "goto": "block4",
+                "wide": true
             }
         ]
     },
     {
         "block_key": "block4",
-        "name": "intro",
+        "name": "Reactive",
         "video": "pexels-mart-production-7644020.mp4",
+        "logo": "logo-react.svg",
         "buttons": [
             {
                 "key": "button1",
@@ -42,14 +62,7 @@
     },
     {
         "block_key": "block5",
-        "name": "intro",
-        "video": "Attachment_1647157571.mp4",
-        "buttons": [
-            {
-                "key": "button1",
-                "label": "HR Hello",
-                "goto": "block5"
-            }
-        ]
+        "link": "https://streamable.com/y88uzv",
+        "name": "Visit Our Website"
     }
 ]

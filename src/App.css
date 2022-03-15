@@ -19,6 +19,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.feed-item.end {
+  background-color: #007bff;
 }
 
 .video-section {
@@ -28,12 +34,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-.action-section {
+.bottom-section {
   /* align-self: flex-end; */
-  padding-top: 10em;
+  padding-bottom: 4em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   z-index: 1;
 }
@@ -69,4 +81,48 @@
 
 .feed-button:focus {
   box-shadow: 0 0 0 0.1rem rgb(0 123 255 / 50%);
+}
+
+.feed-button.wide {
+  width: 90%;
+}
+
+.top-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.top-section .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+}
+
+.top-section .mute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.top-section .title {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  color: white;
+  font-size: 32px;
+  margin: 1.2rem;
+}
+
+.end-link {
+  text-align: center;
+  color: white;
+  /* text-decoration: none; */
+  font-size: 32px;
 }

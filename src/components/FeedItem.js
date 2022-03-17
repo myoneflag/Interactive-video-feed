@@ -61,7 +61,7 @@ const FeedItem = ({ data, before, after, goto }) => {
   if (!video) {
     return (
       <div className="feed-item">
-        <a href={link} className="end-link" target="_blank">{name}</a>
+        <a href={link} className="end-link" target="_blank" rel="noreferrer">{name}</a>
       </div>
     )
   }

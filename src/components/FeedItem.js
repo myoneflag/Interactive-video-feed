@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
 
 const FeedItem = ({ data, before, after, goto }) => {
-  const { block_key, video, buttons, name, logo, link } = data
+  const { block_key, video, buttons, buttonTitle, name, logo, link } = data
   const player = useRef(null)
   const [loaded, setLoaded] = useState(false)
   const [playing, setPlaying] = useState(false)
@@ -58,7 +58,15 @@ const FeedItem = ({ data, before, after, goto }) => {
     // eslint-disable-next-line
   }, [after])
 
-  return (video ? 
+  if (!video) {
+    return (
+      <div className="feed-item">
+        <a href={link} className="end-link" target="_blank">{name}</a>
+      </div>
+    )
+  }
+
+  return (
     <div className="feed-item">
       <div
         className="video-section"
@@ -83,8 +91,8 @@ const FeedItem = ({ data, before, after, goto }) => {
         <img
           src={`/images/${logo}`}
           className="logo"
-          width={60}
-          height={60}
+          width={30}
+          height={30}
           alt="logo"
         />
         <h1 className="title">{name}</h1>
@@ -92,25 +100,26 @@ const FeedItem = ({ data, before, after, goto }) => {
           onClick={() => setMuted(!muted)}
           src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
           className="mute"
-          width={muted ? 35 : 50}
-          height={muted ? 35 : 50}
+          width={30}
+          height={30}
           alt="mute-unmute"
         />
       </div>
       <div className="bottom-section">
-        {buttons.map((button, index) => (
-          <button
-            type="button"
-            key={index}
-            className={`feed-button ${button.wide && 'wide'}`}
-            onClick={() => goto(button.goto)}
-          >
-            {button.label}
-          </button>
-        ))}
+        <h2>{buttonTitle}</h2>
+        <div className="button-group">
+          {buttons.map((button, index) => (
+            <button
+              type="button"
+              key={index}
+              className={`feed-button ${button.wide && 'wide'} ${button.center && 'center'}`}
+              onClick={() => goto(button.goto)}
+            >
+              {button.label}
+            </button>
+          ))}
+        </div>
       </div>
-    </div> : <div className="feed-item end">
-      <a href={link} className="end-link">{name}</a>
     </div>
   )
 }

@@ -23,8 +23,8 @@
   overflow: hidden;
 }
 
-.feed-item.end {
-  background-color: #007bff;
+.feed-item:last-of-type {
+  background-color: #1a4189;
 }
 
 .video-section {
@@ -38,16 +38,28 @@
 }
 
 .bottom-section {
-  /* align-self: flex-end; */
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
+}
+
+.bottom-section h2 {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Bird Paradise';
+  color: white;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  z-index: 1;
 }
 
 .feed-button {
@@ -61,30 +73,43 @@
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.8em 2em;
-  font-size: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1.05em;
   line-height: 1.5;
   border-radius: 2em;
   transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #1a4189;
+  border-color: #1a4189;
   cursor: pointer;
-  margin: .5rem;
+  margin: .2rem .25rem;
+  font-family: serif;
+  white-space: pre-wrap;
 }
 
-.feed-button:hover, .feed-button:active {
+.feed-button:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #1a4189;
+  border-color: #1a4189;
+}
+
+.feed-button:active {
+  color: #fff;
+  background-color: white;
+  border-color: white;
+  color: black;
 }
 
 .feed-button:focus {
-  box-shadow: 0 0 0 0.1rem rgb(0 123 255 / 50%);
+  box-shadow: 0 0 0 0.1rem #1a4189;
 }
 
 .feed-button.wide {
   width: 90%;
+}
+
+.feed-button.center {
+  align-self: center;
 }
 
 .top-section {
@@ -97,11 +122,27 @@
   right: 0;
 }
 
+@keyframes pulse {
+  0% {
+    margin-top: 0px;
+  }
+  95% {
+    margin-top: 0px;
+  }
+  98% {
+    margin-top: 5px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+
 .top-section .logo {
   position: absolute;
   top: 0;
   left: 0;
   padding: 1em;
+  animation: pulse 5s ease-in-out infinite alternate;
 }
 
 .top-section .mute {
@@ -114,10 +155,12 @@
 .top-section .title {
   position: absolute;
   top: 0;
-  left: 80px;
+  left: 40px;
   color: white;
-  font-size: 32px;
+  font-size: 18px;
   margin: 1.2rem;
+  font-family: 'Bird Paradise';
+  white-space: break-spaces;
 }
 
 .end-link {

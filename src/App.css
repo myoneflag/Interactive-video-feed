@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-.feed-item:last-of-type {
+.feed-item.link-section {
   background-color: #1a4189;
 }
 
@@ -163,7 +163,7 @@
   white-space: break-spaces;
 }
 
-.end-link {
+.feed-item.link-section a {
   text-align: center;
   color: white;
   /* text-decoration: none; */

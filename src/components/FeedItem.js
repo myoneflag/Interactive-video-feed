@@ -60,7 +60,7 @@ const FeedItem = ({ data, before, after, goto }) => {
 
   if (!video) {
     return (
-      <div className="feed-item">
+      <div className="feed-item link-section">
         <a href={link} className="end-link" target="_blank" rel="noreferrer">{name}</a>
       </div>
     )

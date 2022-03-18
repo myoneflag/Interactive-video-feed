@@ -54,7 +54,7 @@ const FeedItem = ({ data, before, after, goto }) => {
   useEffect(() => {
     setPlaying(after)
     setMuted(after)
-    // setTimeout(() => setMuted(false), 1)
+    // setTimeout(() => setMuted(false), 100)
     // eslint-disable-next-line
   }, [after])
 

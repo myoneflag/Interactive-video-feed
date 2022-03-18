@@ -12,6 +12,14 @@
   height: 100%;
 }
 
+.slick-slider.slick-vertical .slick-slide {
+  border: 0;
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
+
 .feed-item {
   height: 100vh;
   width: 100%;

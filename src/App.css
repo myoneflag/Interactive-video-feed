@@ -34,6 +34,58 @@
   left: 50%;
   transform: translate(-50%, -50%); */
   overflow: hidden;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    margin-top: 0px;
+  }
+  95% {
+    margin-top: 0px;
+  }
+  98% {
+    margin-top: 5px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+
+.top-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.top-section .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  animation: pulse 5s ease-in-out infinite alternate;
+}
+
+.top-section .mute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.top-section .title {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  color: white;
+  font-size: 18px;
+  margin: 1.2rem;
+  font-family: 'Bird Paradise';
+  white-space: break-spaces;
 }
 
 .bottom-section {
@@ -42,7 +94,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .bottom-section h2 {
@@ -102,57 +154,6 @@
 
 .feed-button.center {
   align-self: center;
-}
-
-.top-section {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-@keyframes pulse {
-  0% {
-    margin-top: 0px;
-  }
-  95% {
-    margin-top: 0px;
-  }
-  98% {
-    margin-top: 5px;
-  }
-  100% {
-    margin-top: -10px;
-  }
-}
-
-.top-section .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1em;
-  animation: pulse 5s ease-in-out infinite alternate;
-}
-
-.top-section .mute {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-}
-
-.top-section .title {
-  position: absolute;
-  top: 0;
-  left: 40px;
-  color: white;
-  font-size: 18px;
-  margin: 1.2rem;
-  font-family: 'Bird Paradise';
-  white-space: break-spaces;
 }
 
 .feed-item.link-section a {

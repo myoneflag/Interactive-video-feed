@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { FeedItem } from '../components'
-import Div100vh from 'react-div-100vh'
 import config from '../data/config.json'
 
 const VideoFeed = () => {
@@ -36,22 +35,20 @@ const VideoFeed = () => {
   }
 
   return (
-    <Div100vh>
-      <Slider
-        ref={slider}
-        {...settings}
-      >
-        {config.map((item, index) => (
-          <FeedItem
-            data={item}
-            key={index}
-            before={beforeIndex === index}
-            after={AfterIndex === index}
-            goto={goto}
-          />
-        ))}
-      </Slider>
-    </Div100vh>
+    <Slider
+      ref={slider}
+      {...settings}
+    >
+      {config.map((item, index) => (
+        <FeedItem
+          data={item}
+          key={index}
+          before={beforeIndex === index}
+          after={AfterIndex === index}
+          goto={goto}
+        />
+      ))}
+    </Slider>
   )
 }
 

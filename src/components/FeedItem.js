@@ -34,73 +34,69 @@ const FeedItem = ({ data, before, after, goto }) => {
     // eslint-disable-next-line
   }, [after])
 
-  return (
-    <Div100vh>
-      {video ? (
-        <div className="feed-item">
-          <div
-            className="video-section"
-            onClick={() => setPlaying(!playing)}
-            style={{ width: "100%", height: '100vh' }}
-          >
-            <ReactPlayer
-              id={`video-${block_key}`}
-              ref={player}
-              url={`/videos/${video}`}
-              width="100%"
-              height="100%"
-              className="video-bg"
-              onReady={() => setLoaded(true)}
-              playing={playing}
-              muted={muted}
-              loop={true}
-              volume={1}
-              playsinline={true}
-            />
-          </div>
-          <div className="top-section">
-            <img
-              src={`/images/${logo}`}
-              className="logo"
-              width={30}
-              height={30}
-              alt="logo"
-            />
-            <h1 className="title">{name}</h1>
-            <img
-              onClick={() => setMuted(!muted)}
-              src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
-              className="mute"
-              width={30}
-              height={30}
-              alt="mute-unmute"
-            />
-          </div>
-          <div className="bottom-section">
-            <h2>{buttonTitle}</h2>
-            <div className="button-group">
-              {buttons.map((button, index) => (
-                <button
-                  type="button"
-                  key={index}
-                  className={`feed-button ${button.wide && 'wide'} ${
-                    button.center && 'center'
-                  }`}
-                  onClick={() => goto(button.goto)}
-                >
-                  {button.label}
-                </button>
-              ))}
-            </div>
-          </div>
+  return video ? (
+    <Div100vh className="feed-item">
+      <div
+        className="video-section"
+        onClick={() => setPlaying(!playing)}
+        style={{ width: '100%', height: '100vh' }}
+      >
+        <ReactPlayer
+          id={`video-${block_key}`}
+          ref={player}
+          url={`/videos/${video}`}
+          width="100%"
+          height="100%"
+          className="video-bg"
+          onReady={() => setLoaded(true)}
+          playing={playing}
+          muted={muted}
+          loop={true}
+          volume={1}
+          playsinline={true}
+        />
+      </div>
+      <div className="top-section">
+        <img
+          src={`/images/${logo}`}
+          className="logo"
+          width={30}
+          height={30}
+          alt="logo"
+        />
+        <h1 className="title">{name}</h1>
+        <img
+          onClick={() => setMuted(!muted)}
+          src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
+          className="mute"
+          width={30}
+          height={30}
+          alt="mute-unmute"
+        />
+      </div>
+      <div className="bottom-section">
+        <h2>{buttonTitle}</h2>
+        <div className="button-group">
+          {buttons.map((button, index) => (
+            <button
+              type="button"
+              key={index}
+              className={`feed-button ${button.wide && 'wide'} ${
+                button.center && 'center'
+              }`}
+              onClick={() => goto(button.goto)}
+            >
+              {button.label}
+            </button>
+          ))}
         </div>
-      ) : (
-        <div className="feed-item link-section">
-          <a href={link} className="end-link" target="_blank" rel="noreferrer">
-            {name}
-          </a>
-        </div>
-      )}
+      </div>
+    </Div100vh>
+  ) : (
+    <Div100vh className="feed-item link-section">
+      <a href={link} className="end-link" target="_blank" rel="noreferrer">
+        {name}
+      </a>
     </Div100vh>
   )
 }

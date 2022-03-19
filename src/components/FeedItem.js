@@ -54,8 +54,8 @@ const FeedItem = ({ data, before, after, goto }) => {
   }, [before])
 
   useEffect(() => {
-    setPlaying(after)
     setMuted(after)
+    setPlaying(after)
     // setTimeout(() => setMuted(false), 100)
     if (loaded && !after) {
       try {

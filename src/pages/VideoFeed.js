@@ -35,10 +35,7 @@ const VideoFeed = () => {
   }
 
   return (
-    <Slider
-      ref={slider}
-      {...settings}
-    >
+    <Slider ref={slider} {...settings}>
       {config.map((item, index) => (
         <FeedItem
           data={item}

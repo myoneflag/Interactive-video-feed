@@ -10,7 +10,6 @@ const VideoFeed = () => {
 
   const settings = {
     dots: false,
-    // fade: true,
     speed: 1200,
     infinite: false,
     slidesToShow: 1,

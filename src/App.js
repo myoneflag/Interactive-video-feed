@@ -13,7 +13,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 const App = () => {
   return (
-    <Div100vh>
+    <Div100vh className="app">
       <Router>
         <Switch>
           <Route exact path="/" component={VideoFeed} />

@@ -55,6 +55,13 @@ const FeedItem = ({ data, before, after, goto }) => {
     setPlaying(after)
     setMuted(after)
     // setTimeout(() => setMuted(false), 100)
+    if (loaded && !after) {
+      try {
+        player.current.seekTo(0)
+      } catch (err) {
+        console.log(err)
+      }
+    }
     // eslint-disable-next-line
   }, [after])
 

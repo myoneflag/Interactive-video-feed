@@ -12,7 +12,7 @@ const FeedItem = ({ data, before, after, goto }) => {
 
   const [fitted, setFitted] = useState(false)
   const [width, setWidth] = useState('100%')
-  const [height, setHeight] = useState('100vh')
+  const [height, setHeight] = useState('100%')
 
   useEffect(() => {
     if (loaded) {
@@ -36,7 +36,7 @@ const FeedItem = ({ data, before, after, goto }) => {
       //         video.videoWidth /
       //         (pageHeight / window.innerWidth)) *
       //         100,
-      //     ) + 'vh',
+      //     ) + '%',
       //   )
       // }
       setFitted(true)

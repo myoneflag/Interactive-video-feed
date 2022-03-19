@@ -96,6 +96,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           muted={muted}
           loop={true}
           volume={1}
+          playsinline={true}
         />
       </div>
       <div className="top-section">

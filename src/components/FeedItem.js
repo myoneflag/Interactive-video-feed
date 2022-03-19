@@ -1,13 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
-import Div100vh from 'react-div-100vh'
+import Div100vh, { use100vh } from 'react-div-100vh'
 
 const FeedItem = ({ data, before, after, goto }) => {
   const { block_key, video, buttons, buttonTitle, name, logo, link } = data
+  const pageHeight = use100vh()
   const player = useRef(null)
   const [loaded, setLoaded] = useState(false)
   const [playing, setPlaying] = useState(false)
   const [muted, setMuted] = useState(false)
+
+  const [fitted, setFitted] = useState(false)
+  const [width, setWidth] = useState('100%')
+
+  useEffect(() => {
+    if (loaded) {
+      const video = document.querySelector(`#video-${block_key} video`)
+      if (
+        pageHeight / window.innerWidth <
+        video.videoHeight / video.videoWidth
+      ) {
+        setWidth(
+          Math.ceil(video.videoWidth * pageHeight / video.videoHeight),
+        )
+      }
+      setFitted(true)
+    }
+    // eslint-disable-next-line
+  }, [loaded])
 
   useEffect(() => {
     if (loaded && before) {
@@ -56,7 +76,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           playsinline={true}
         />
       </div>
-      <div className="top-section">
+      <div className="top-section" style={{ width, visibility: fitted ? 'visible' : 'hidden' }}>
         <img
           src={`/images/${logo}`}
           className="logo"
@@ -74,7 +94,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           alt="mute-unmute"
         />
       </div>
-      <div className="bottom-section">
+      <div className="bottom-section" style={{ width, visibility: fitted ? 'visible' : 'hidden' }}>
         <h2>{buttonTitle}</h2>
         <div className="button-group">
           {buttons.map((button, index) => (

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
+import { use100vh } from 'react-div-100vh'
 
 const FeedItem = ({ data, before, after, goto }) => {
   const { block_key, video, buttons, buttonTitle, name, logo, link } = data
+  const pageHeight = use100vh()
   const player = useRef(null)
   const [loaded, setLoaded] = useState(false)
   const [playing, setPlaying] = useState(false)
@@ -16,12 +18,12 @@ const FeedItem = ({ data, before, after, goto }) => {
     if (loaded) {
       const video = document.querySelector(`#video-${block_key} video`)
       if (
-        window.innerHeight / window.innerWidth >
+        pageHeight / window.innerWidth >
         video.videoHeight / video.videoWidth
       ) {
         setWidth(
           Math.ceil(
-            (window.innerHeight /
+            (pageHeight /
               window.innerWidth /
               (video.videoHeight / video.videoWidth)) *
               100,
@@ -32,7 +34,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           Math.ceil(
             (video.videoHeight /
               video.videoWidth /
-              (window.innerHeight / window.innerWidth)) *
+              (pageHeight / window.innerWidth)) *
               100,
           ) + 'vh',
         )

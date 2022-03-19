@@ -39,7 +39,7 @@ const FeedItem = ({ data, before, after, goto }) => {
       <div
         className="video-section"
         onClick={() => setPlaying(!playing)}
-        style={{ width: '100%', height: '100vh', zIndex: 1 }}
+        style={{ width: '100%', height: '100vh' }}
       >
         <ReactPlayer
           id={`video-${block_key}`}
@@ -56,7 +56,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           playsinline={true}
         />
       </div>
-      <div className="top-section" style={{ zIndex: 2 }}>
+      <div className="top-section">
         <img
           src={`/images/${logo}`}
           className="logo"
@@ -74,7 +74,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           alt="mute-unmute"
         />
       </div>
-      <div className="bottom-section" style={{ zIndex: 2 }}>
+      <div className="bottom-section">
         <h2>{buttonTitle}</h2>
         <div className="button-group">
           {buttons.map((button, index) => (

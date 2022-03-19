@@ -17,28 +17,28 @@ const FeedItem = ({ data, before, after, goto }) => {
   useEffect(() => {
     if (loaded) {
       const video = document.querySelector(`#video-${block_key} video`)
-      if (
-        pageHeight / window.innerWidth >
-        video.videoHeight / video.videoWidth
-      ) {
-        setWidth(
-          Math.ceil(
-            (pageHeight /
-              window.innerWidth /
-              (video.videoHeight / video.videoWidth)) *
-              100,
-          ) + '%',
-        )
-      } else {
-        setHeight(
-          Math.ceil(
-            (video.videoHeight /
-              video.videoWidth /
-              (pageHeight / window.innerWidth)) *
-              100,
-          ) + 'vh',
-        )
-      }
+      // if (
+      //   pageHeight / window.innerWidth >
+      //   video.videoHeight / video.videoWidth
+      // ) {
+      //   setWidth(
+      //     Math.ceil(
+      //       (pageHeight /
+      //         window.innerWidth /
+      //         (video.videoHeight / video.videoWidth)) *
+      //         100,
+      //     ) + '%',
+      //   )
+      // } else {
+      //   setHeight(
+      //     Math.ceil(
+      //       (video.videoHeight /
+      //         video.videoWidth /
+      //         (pageHeight / window.innerWidth)) *
+      //         100,
+      //     ) + 'vh',
+      //   )
+      // }
       setFitted(true)
     }
     // eslint-disable-next-line

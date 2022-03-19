@@ -41,7 +41,7 @@ const FeedItem = ({ data, before, after, goto }) => {
   }, [loaded])
 
   useEffect(() => {
-    if (loaded) {
+    if (loaded && before) {
       try {
         player.current.seekTo(0)
       } catch (err) {

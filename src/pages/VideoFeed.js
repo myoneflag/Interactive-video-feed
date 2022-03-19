@@ -10,7 +10,7 @@ const VideoFeed = () => {
 
   const settings = {
     dots: false,
-    speed: 1200,
+    speed: 1400,
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,

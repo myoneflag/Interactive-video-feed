@@ -8,6 +8,7 @@ const FeedItem = ({ data, before, after, goto }) => {
   const [playing, setPlaying] = useState(false)
   const [muted, setMuted] = useState(false)
 
+  const [fitted, setFitted] = useState(false)
   const [width, setWidth] = useState('100%')
   const [height, setHeight] = useState('100vh')
 
@@ -36,6 +37,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           ) + 'vh',
         )
       }
+      setFitted(true)
     }
     // eslint-disable-next-line
   }, [loaded])
@@ -127,6 +129,7 @@ const FeedItem = ({ data, before, after, goto }) => {
           ))}
         </div>
       </div>
+      <div className={fitted ? '' : 'overlay'}></div>
     </div>
   )
 }

@@ -69,18 +69,9 @@ const FeedItem = ({ data, before, after, goto }) => {
     // eslint-disable-next-line
   }, [after])
 
-  if (!video) {
-    return (
-      <div className="feed-item link-section">
-        <a href={link} className="end-link" target="_blank" rel="noreferrer">{name}</a>
-      </div>
-    )
-  }
-
   return (
-    
     <Div100vh>
-      <div className="feed-item">
+      {video ? <div className="feed-item">
         <div
           className="video-section"
           onClick={() => setPlaying(!playing)}
@@ -135,7 +126,11 @@ const FeedItem = ({ data, before, after, goto }) => {
           </div>
         </div>
         <div className={fitted ? '' : 'overlay'}></div>
+      </div>: (
+      <div className="feed-item link-section">
+        <a href={link} className="end-link" target="_blank" rel="noreferrer">{name}</a>
       </div>
+    )}
     </Div100vh>
   )
 }

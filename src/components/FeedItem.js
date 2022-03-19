@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
-import { use100vh } from 'react-div-100vh'
+import Div100vh, { use100vh } from 'react-div-100vh'
 
 const FeedItem = ({ data, before, after, goto }) => {
   const { block_key, video, buttons, buttonTitle, name, logo, link } = data
@@ -78,62 +78,65 @@ const FeedItem = ({ data, before, after, goto }) => {
   }
 
   return (
-    <div className="feed-item">
-      <div
-        className="video-section"
-        onClick={() => setPlaying(!playing)}
-        style={{ width, height }}
-      >
-        <ReactPlayer
-          id={`video-${block_key}`}
-          ref={player}
-          url={`/videos/${video}`}
-          width="100%"
-          height="100%"
-          className="video-bg"
-          onReady={() => setLoaded(true)}
-          playing={playing}
-          muted={muted}
-          loop={true}
-          volume={1}
-          playsinline={true}
-        />
-      </div>
-      <div className="top-section">
-        <img
-          src={`/images/${logo}`}
-          className="logo"
-          width={30}
-          height={30}
-          alt="logo"
-        />
-        <h1 className="title">{name}</h1>
-        <img
-          onClick={() => setMuted(!muted)}
-          src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
-          className="mute"
-          width={30}
-          height={30}
-          alt="mute-unmute"
-        />
-      </div>
-      <div className="bottom-section">
-        <h2>{buttonTitle}</h2>
-        <div className="button-group">
-          {buttons.map((button, index) => (
-            <button
-              type="button"
-              key={index}
-              className={`feed-button ${button.wide && 'wide'} ${button.center && 'center'}`}
-              onClick={() => goto(button.goto)}
-            >
-              {button.label}
-            </button>
-          ))}
+    
+    <Div100vh>
+      <div className="feed-item">
+        <div
+          className="video-section"
+          onClick={() => setPlaying(!playing)}
+          style={{ width, height }}
+        >
+          <ReactPlayer
+            id={`video-${block_key}`}
+            ref={player}
+            url={`/videos/${video}`}
+            width="100%"
+            height="100%"
+            className="video-bg"
+            onReady={() => setLoaded(true)}
+            playing={playing}
+            muted={muted}
+            loop={true}
+            volume={1}
+            playsinline={true}
+          />
         </div>
+        <div className="top-section">
+          <img
+            src={`/images/${logo}`}
+            className="logo"
+            width={30}
+            height={30}
+            alt="logo"
+          />
+          <h1 className="title">{name}</h1>
+          <img
+            onClick={() => setMuted(!muted)}
+            src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
+            className="mute"
+            width={30}
+            height={30}
+            alt="mute-unmute"
+          />
+        </div>
+        <div className="bottom-section">
+          <h2>{buttonTitle}</h2>
+          <div className="button-group">
+            {buttons.map((button, index) => (
+              <button
+                type="button"
+                key={index}
+                className={`feed-button ${button.wide && 'wide'} ${button.center && 'center'}`}
+                onClick={() => goto(button.goto)}
+              >
+                {button.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className={fitted ? '' : 'overlay'}></div>
       </div>
-      <div className={fitted ? '' : 'overlay'}></div>
-    </div>
+    </Div100vh>
   )
 }
 

@@ -1,112 +1,112 @@
-[
-    {
-        "block_key": "block2",
-        "name": "Join Sealights",
-        "video": "pexels-tima-miroshnichenko-5439073.mp4",
-        "logo": "logo-dashkit.svg",
-        "buttonTitle": "Choose your team",
-        "buttons": [
-            {
-                "key": "button12",
-                "label": "Sales",
-                "goto": "block3"
-            },
-            {
-                "key": "button15",
-                "label": "Customer Success",
-                "goto": "block3"
-            },
-            {
-                "key": "button16",
-                "label": "Marketing",
-                "goto": "block3"
-            },
-            {
-                "key": "button17",
-                "label": "Engineering",
-                "goto": "block3"
-            }
-        ]
-    },
-    {
-        "block_key": "block3",
-        "name": "Join Sealights \n #Customer Success",
-        "video": "pexels-tima-miroshnichenko-5438945.mp4",
-        "logo": "logo-dashkit.svg",
-        "buttonTitle": "The Customer Success role in the core Business of Sealights",
-        "buttons": [
-        ]
-    },
-    {
-        "block_key": "block4",
-        "name": "Join Sealights \n #Customer Success",
-        "video": "pexels-mart-production-7644020.mp4",
-        "logo": "logo-dashkit.svg",
-        "buttonTitle": "Choose your location",
-        "buttons": [
-            {
-                "key": "button1",
-                "label": "USA",
-                "goto": "block5"
-            },
-            {
-                "key": "button1",
-                "label": "Europe",
-                "goto": "block5"
-            },
-            {
-                "key": "button1",
-                "label": "Lsrael",
-                "goto": "block5"
-            }
-        ]
-    },
-    {
-        "block_key": "block5",
-        "name": "Join Sealights \n #Customer Success",
-        "video": "pexels-tima-miroshnichenko-5438945.mp4",
-        "logo": "logo-dashkit.svg",
-        "buttonTitle": "Open positions",
-        "buttons": [
-            {
-                "key": "btn6",
-                "label": "Customer Success Manager",
-                "goto": "block6",
-                "wide": true
-            },
-            {
-                "key": "btn8",
-                "label": "Technical Support Engineer",
-                "goto": "block6",
-                "wide": true
-            },
-            {
-                "key": "btn9",
-                "label": "Senioir Professional Service Engineer",
-                "goto": "block6",
-                "wide": true
-            }
-        ]
-    },
-    {
-        "block_key": "block6",
-        "name": "Join Sealights \n #Customer Success",
-        "video": "pexels-mart-production-7644020.mp4",
-        "logo": "logo-dashkit.svg",
-        "buttons": [
-            {
-                "key": "button15",
-                "label": "Technical Support Engineer \n Apply Now!",
-                "goto": "block7",
-                "wide": true,
-                "center": true
-            }
-        ]
-    },
-    {
-        "block_key": "block7",
-        "logo": "logo-dashkit.svg",
-        "link": "https://streamable.com/y88uzv",
-        "name": "Visit Our Website"
-    }
-]
+{
+    "logo": "logo.jpg",
+    "blocks": [
+        {
+            "block_key": "culture_1",
+            "name": "Join Sealights",
+            "video": "Ohad_Fun fact about our team.mp4",
+            "logo": "Sealights-logo-white-1.png",
+            "buttonTitle": "Choose your team",
+            "buttons": [
+                {
+                    "key": "button12",
+                    "label": "Sales",
+                    "goto": "block5"
+                },
+                {
+                    "key": "button15",
+                    "label": "Customer Success",
+                    "goto": "block3"
+                },
+                {
+                    "key": "button16",
+                    "label": "Marketing",
+                    "goto": "block3"
+                },
+                {
+                    "key": "button17",
+                    "label": "Engineering",
+                    "goto": "block3"
+                }
+            ]
+        },
+        {
+            "block_key": "block3",
+            "name": "Join Sealights \n #Customer Success",
+            "video": "Ohad_Fun fact about our team.mp4",
+            "buttonTitle": "The Customer Success role in the core Business of Sealights",
+            "buttons": [
+            ]
+        },
+        {
+            "block_key": "block4",
+            "name": "Join Sealights \n #Customer Success",
+            "video": "Ohad_Fun fact about our team.mp4",
+            "buttonTitle": "Choose your location",
+            "buttons": [
+                {
+                    "key": "button1",
+                    "label": "USA",
+                    "goto": "block5"
+                },
+                {
+                    "key": "button1",
+                    "label": "Europe",
+                    "goto": "block5"
+                },
+                {
+                    "key": "button1",
+                    "label": "Lsrael",
+                    "goto": "block5"
+                }
+            ]
+        },
+        {
+            "block_key": "block5",
+            "name": "Join Sealights \n #Customer Success",
+            "video": "Ohad_Fun fact about our team.mp4",
+            "buttonTitle": "Open positions",
+            "buttons": [
+                {
+                    "key": "btn6",
+                    "label": "Customer Success Manager",
+                    "goto": "block6",
+                    "wide": true
+                },
+                {
+                    "key": "btn8",
+                    "label": "Technical Support Engineer",
+                    "goto": "block6",
+                    "wide": true
+                },
+                {
+                    "key": "btn9",
+                    "label": "Senioir Professional Service Engineer",
+                    "goto": "block6",
+                    "wide": true
+                }
+            ]
+        },
+        {
+            "block_key": "block6",
+            "name": "Join Sealights \n #Customer Success",
+            "video": "Ohad_Fun fact about our team.mp4",
+            "logo": "logo-dashkit.svg",
+            "buttons": [
+                {
+                    "key": "button15",
+                    "label": "Technical Support Engineer \n Apply Now!",
+                    "goto": "block7",
+                    "wide": true,
+                    "center": true
+                }
+            ]
+        },
+        {
+            "block_key": "block7",
+            "logo": "logo-dashkit.svg",
+            "link": "https://streamable.com/y88uzv",
+            "name": "Visit Our Website"
+        }
+    ]
+}

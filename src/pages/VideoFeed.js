@@ -23,7 +23,7 @@ const VideoFeed = () => {
 
   const goto = (blockId) => {
     try {
-      const index = config.findIndex((block) => block.block_key === blockId)
+      const index = config.blocks.findIndex((block) => block.block_key === blockId)
       if (index < 0) {
         slider.current.slickGoTo(beforeIndex + 1)
       } else {
@@ -36,9 +36,10 @@ const VideoFeed = () => {
 
   return (
     <Slider ref={slider} {...settings}>
-      {config.map((item, index) => (
+      {config.blocks.map((item, index) => (
         <FeedItem
           data={item}
+          logo={config.logo}
           key={index}
           before={beforeIndex === index}
           after={AfterIndex === index}

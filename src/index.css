@@ -33,3 +33,13 @@ code {
   font-family: "Bird Paradise";
   src: url("./assets/fonts/BirdsOfParadisePersonalUseOnly.ttf") format("truetype");
 }
+
+@font-face{
+  font-family: "Assistant Regular";
+  src: url("./assets/fonts/assistant.regular.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Assistant Bold";
+  src: url("./assets/fonts/assistant.bold.ttf") format("truetype");
+}

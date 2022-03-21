@@ -2,8 +2,16 @@ import React, { useEffect, useRef, useState } from 'react'
 import ReactPlayer from 'react-player'
 import Div100vh, { use100vh } from 'react-div-100vh'
 
-const FeedItem = ({ data, before, after, goto }) => {
-  const { block_key, video, buttons, buttonTitle, name, logo, link } = data
+const FeedItem = ({ data, logo, before, after, goto }) => {
+  const {
+    block_key,
+    video,
+    buttons,
+    buttonTitle,
+    name,
+    logo: pagelogo,
+    link,
+  } = data
   const pageHeight = use100vh()
   const player = useRef(null)
   const [loaded, setLoaded] = useState(false)
@@ -20,9 +28,7 @@ const FeedItem = ({ data, before, after, goto }) => {
         pageHeight / window.innerWidth <
         video.videoHeight / video.videoWidth
       ) {
-        setWidth(
-          Math.ceil(video.videoWidth * pageHeight / video.videoHeight),
-        )
+        setWidth(Math.ceil((video.videoWidth * pageHeight) / video.videoHeight))
       }
       setFitted(true)
     }
@@ -76,7 +82,10 @@ const FeedItem = ({ data, before, after, goto }) => {
           playsinline={true}
         />
       </div>
-      <div className="top-section" style={{ width, visibility: fitted ? 'visible' : 'hidden' }}>
+      <div
+        className="top-section"
+        style={{ width, visibility: fitted ? 'visible' : 'hidden' }}
+      >
         <img
           src={`/images/${logo}`}
           className="logo"
@@ -89,12 +98,24 @@ const FeedItem = ({ data, before, after, goto }) => {
           onClick={() => setMuted(!muted)}
           src={`/images/${muted ? 'mute' : 'unmute'}.svg`}
           className="mute"
-          width={30}
-          height={30}
+          width={24}
+          height={24}
           alt="mute-unmute"
         />
       </div>
-      <div className="bottom-section" style={{ width, visibility: fitted ? 'visible' : 'hidden' }}>
+      <div
+        className="bottom-section"
+        style={{ width, visibility: fitted ? 'visible' : 'hidden' }}
+      >
+        {pagelogo ? (
+          <img
+            src={`/images/${pagelogo}`}
+            className="page-logo"
+            width={width / 2}
+            height="auto"
+            alt="page-logo"
+          />
+        ) : null}
         <h2>{buttonTitle}</h2>
         <div className="button-group">
           {buttons.map((button, index) => (
@@ -110,6 +131,7 @@ const FeedItem = ({ data, before, after, goto }) => {
             </button>
           ))}
         </div>
+        <span className="powered-by">powered by Team.me</span>
       </div>
     </Div100vh>
   ) : (

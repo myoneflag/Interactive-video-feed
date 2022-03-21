@@ -1,112 +1,161 @@
-{
-    "logo": "logo.jpg",
-    "blocks": [
-        {
-            "block_key": "culture_1",
-            "name": "Join Sealights",
-            "video": "Ohad_Fun fact about our team.mp4",
-            "logo": "Sealights-logo-white-1.png",
-            "buttonTitle": "Choose your team",
-            "buttons": [
-                {
-                    "key": "button12",
-                    "label": "Sales",
-                    "goto": "block5"
-                },
-                {
-                    "key": "button15",
-                    "label": "Customer Success",
-                    "goto": "block3"
-                },
-                {
-                    "key": "button16",
-                    "label": "Marketing",
-                    "goto": "block3"
-                },
-                {
-                    "key": "button17",
-                    "label": "Engineering",
-                    "goto": "block3"
-                }
-            ]
-        },
-        {
-            "block_key": "block3",
-            "name": "Join Sealights \n #Customer Success",
-            "video": "Ohad_Fun fact about our team.mp4",
-            "buttonTitle": "The Customer Success role in the core Business of Sealights",
-            "buttons": [
-            ]
-        },
-        {
-            "block_key": "block4",
-            "name": "Join Sealights \n #Customer Success",
-            "video": "Ohad_Fun fact about our team.mp4",
-            "buttonTitle": "Choose your location",
-            "buttons": [
-                {
-                    "key": "button1",
-                    "label": "USA",
-                    "goto": "block5"
-                },
-                {
-                    "key": "button1",
-                    "label": "Europe",
-                    "goto": "block5"
-                },
-                {
-                    "key": "button1",
-                    "label": "Lsrael",
-                    "goto": "block5"
-                }
-            ]
-        },
-        {
-            "block_key": "block5",
-            "name": "Join Sealights \n #Customer Success",
-            "video": "Ohad_Fun fact about our team.mp4",
-            "buttonTitle": "Open positions",
-            "buttons": [
-                {
-                    "key": "btn6",
-                    "label": "Customer Success Manager",
-                    "goto": "block6",
-                    "wide": true
-                },
-                {
-                    "key": "btn8",
-                    "label": "Technical Support Engineer",
-                    "goto": "block6",
-                    "wide": true
-                },
-                {
-                    "key": "btn9",
-                    "label": "Senioir Professional Service Engineer",
-                    "goto": "block6",
-                    "wide": true
-                }
-            ]
-        },
-        {
-            "block_key": "block6",
-            "name": "Join Sealights \n #Customer Success",
-            "video": "Ohad_Fun fact about our team.mp4",
-            "logo": "logo-dashkit.svg",
-            "buttons": [
-                {
-                    "key": "button15",
-                    "label": "Technical Support Engineer \n Apply Now!",
-                    "goto": "block7",
-                    "wide": true,
-                    "center": true
-                }
-            ]
-        },
-        {
-            "block_key": "block7",
-            "logo": "logo-dashkit.svg",
-            "link": "https://streamable.com/y88uzv",
-            "name": "Visit Our Website"
-        }
-    ]
-}
+[
+    {
+        "block_key": "home",
+        "video": "Ohad_Fun fact about our team.mp4",
+        "buttons": [
+            {
+                "key": "our-offices",
+                "label": "Our Offices",
+                "goto": "our-offices_1"
+            },
+            {
+                "key": "cuture",
+                "label": "Culture",
+                "goto": "culture_1"
+            },
+            {
+                "key": "our-story",
+                "label": "Our Story",
+                "goto": "our-story_1"
+            },
+            {
+                "key": "hiring",
+                "label": "Hiring",
+                "goto": "hiring_1"
+            },
+            {
+                "key": "life-at",
+                "label": "Life at",
+                "goto": "life-at_1"
+            }
+        ]
+    },
+    {
+        "block_key": "culture_1",
+        "block": "Culture",
+        "title": "Customer Success Team",
+        "video": "Ohad_Fun fact about our team.mp4",
+        "avatar": "Ohad.png",
+        "fullname": "Ohad Preger",
+        "role": "Customer Experience Tech Lead",
+        "subject": "Who are we looking for?",
+        "buttons": [
+            {
+                "key": "sales",
+                "label": "Sales",
+                "goto": "culture_2"
+            },
+            {
+                "key": "customer-success",
+                "label": "Customer Success",
+                "goto": "culture_2"
+            },
+            {
+                "key": "marketing",
+                "label": "Marketing",
+                "goto": "culture_2"
+            },
+            {
+                "key": "engineering",
+                "label": "Engineering",
+                "goto": "culture_2"
+            }
+        ]
+    },
+    {
+        "block_key": "culture_2",
+        "block": "Culture",
+        "title": "Chief Customer Officer",
+        "video": "Adi_Join us_END OF FEED VIDEO.mp4",
+        "avatar": "Adi_j.png",
+        "fullname": "Adi Janovitz",
+        "role": "Customer Experience Tech Lead",
+        "subject": "What it’s unique about Bob culture?",
+        "buttons": [
+            {
+                "key": "sales",
+                "label": "Sales",
+                "goto": "culture_3"
+            },
+            {
+                "key": "engineering",
+                "label": "Engineering",
+                "goto": "culture_3"
+            }
+        ]
+    },
+    {
+        "block_key": "culture_3",
+        "block": "Culture",
+        "title": "CS Operations Manager",
+        "video": "Ben_What is the professional development plan at Hibob_.mp4",
+        "avatar": "Ben.png",
+        "fullname": "Ben Ellis",
+        "role": "Customer Experience Tech Lead",
+        "subject": "What is the professional development plan at Hibob?"
+    },
+    {
+        "block_key": "culture_4",
+        "block": "Culture",
+        "title": "Customer Experience and Integrations Specialist",
+        "video": "Erika_What are the skills for a candidate to be successful at your team_.mp4",
+        "avatar": "Erika.png",
+        "fullname": "Erika Veselova",
+        "role": "Customer Experience Tech Lead",
+        "subject": "What are the skills for a candidate to be successful at your team?"
+    },
+    {
+        "block_key": "culture_5",
+        "block": "Culture",
+        "title": "Customer Experience Specialist",
+        "video": "David_What makes the effective and creative_.mp4",
+        "avatar": "David.png",
+        "fullname": "David Simkin",
+        "role": "Customer Experience Tech Lead",
+        "subject": "How did the onboarding experience help you understand the company vibes?",
+        "buttons": [
+            {
+                "key": "sales",
+                "label": "Sales",
+                "goto": "culture_6"
+            },
+            {
+                "key": "customer-success",
+                "label": "Customer Success",
+                "goto": "culture_6"
+            },
+            {
+                "key": "marketing",
+                "label": "Marketing",
+                "goto": "culture_6"
+            }
+        ]
+    },
+    {
+        "block_key": "open-position",
+        "title": "Join us",
+        "video": "Talya_Who is the ideal person to work as a CS_.mp4",
+        "buttons": [
+            {
+                "key": "pos1",
+                "label": "CX Team Lead",
+                "goto": "https://miro.com/app/board/uXjVOF6jCrs=/?moveToWidget=3458764520905077059&cot=14"
+            },
+            {
+                "key": "pos2",
+                "label": "CS Team Leader",
+                "goto": "https://miro.com/app/board/uXjVOF6jCrs=/?moveToWidget=3458764520905077059&cot=14"
+            },
+            {
+                "key": "pos3",
+                "label": "CS Manager",
+                "goto": "https://miro.com/app/board/uXjVOF6jCrs=/?moveToWidget=3458764520905077059&cot=14"
+            },
+            {
+                "key": "pos4",
+                "label": "Director od CX",
+                "goto": "https://miro.com/app/board/uXjVOF6jCrs=/?moveToWidget=3458764520905077059&cot=14"
+            }
+        ]
+    }
+]

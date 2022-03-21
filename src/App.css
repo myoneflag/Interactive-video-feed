@@ -1,6 +1,10 @@
 .app {
   width: 100%;
   overflow: hidden;
+  color: white;
+  font-family: 'Assistant Regular';
+  white-space: break-spaces;
+  font-weight: normal;
 }
 
 /* Slide Custom */
@@ -29,12 +33,6 @@
   background-color: #1a4189;
 }
 
-.feed-item.link-section a {
-  text-align: center;
-  color: white;
-  font-size: 32px;
-}
-
 /* Sections */
 
 .video-section {
@@ -55,31 +53,56 @@
   z-index: 10;
 }
 
-.top-section .logo {
+.top-section .block-info {
   position: absolute;
   top: 0;
   left: 0;
   padding: 1em;
+  display: flex;
+  align-items: center;
 }
 
-.top-section .mute {
+.top-section .block-title {
+  margin-left: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-section .block-title .title {
+  color: white;
+  margin: 0;
+  font-family: 'Assistant Bold';
+  white-space: break-spaces;
+  font-weight: normal;
+  align-self: flex-start;
+}
+
+.top-section .block-action {
   position: absolute;
   top: 0;
   right: 0;
   padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.top-section .block-action .feed-button {
+  background-color: transparent;
+  min-height: 36px;
+  padding: 0.2em 1em;
+  border: 1px solid white;
+  border-radius: .5em;
+  margin-right: 1em;
+}
+
+.top-section .block-action .mute {
   width: 24px;
   height: 24px;
 }
 
-.top-section .title {
-  position: absolute;
-  top: 0;
-  left: 40px;
-  color: white;
-  font-size: 18px;
-  margin: 1.2rem;
-  font-family: 'Assistant Bold';
-  white-space: break-spaces;
+.top-section .block-title .title.bold {
+  font-weight: bold;
 }
 
 /* Bottom */
@@ -96,12 +119,39 @@
   z-index: 10;
 }
 
+.bottom-section .profile {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-section .profile .avatar {
+  margin-left: .5em;
+}
+
+.bottom-section .profile .fullname {
+  margin: 0;
+  margin-left: .5em;
+  font-size: 22px;
+}
+
+.bottom-section .profile .role {
+  margin: 0;
+  margin-left: .5em;
+  font-size: 18px;
+}
+
+.bottom-section .subject {
+  padding: 0 .5em;
+  font-size: 26px;
+  margin: 0;
+}
+
 .bottom-section .page-logo {
-  margin: auto;
+  margin: .5em auto;
   max-height: 100px;
 }
 
-.bottom-section h2 {
+.bottom-section .sub-title {
   font-size: 24px;
   text-align: center;
   font-family: 'Assistant Bold';

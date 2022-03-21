@@ -111,7 +111,7 @@ const FeedItem = ({ data, logo, before, after, goto }) => {
           <img
             src={`/images/${pagelogo}`}
             className="page-logo"
-            width={width / 2}
+            width={width === '100%' ? '50%' : width / 2}
             height="auto"
             alt="page-logo"
           />
@@ -139,6 +139,7 @@ const FeedItem = ({ data, logo, before, after, goto }) => {
       <a href={link} className="end-link" target="_blank" rel="noreferrer">
         {name}
       </a>
+      <span className="powered-by">powered by Team.me</span>
     </Div100vh>
   )
 }

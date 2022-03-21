@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { FeedItem } from '../components'
 import config from '../data/config.json'
@@ -7,6 +7,7 @@ const VideoFeed = () => {
   const slider = useRef(null)
   const [beforeIndex, setBeforeIndex] = useState(0)
   const [AfterIndex, setAfterIndex] = useState(0)
+  const [swipe, setSwipe] = useState(true)
 
   const settings = {
     dots: false,
@@ -34,12 +35,16 @@ const VideoFeed = () => {
     }
   }
 
+  useEffect(() => {
+    setSwipe(!config.blocks[AfterIndex]?.buttons?.length)
+  }, [AfterIndex])
+
   return (
-    <Slider ref={slider} {...settings}>
+    <Slider ref={slider} {...settings} swipe={swipe}>
       {config.blocks.map((item, index) => (
         <FeedItem
           data={item}
-          logo={config.logo}
+          logo={config.logo}          
           key={index}
           before={beforeIndex === index}
           after={AfterIndex === index}

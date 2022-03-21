@@ -118,7 +118,7 @@ const FeedItem = ({ data, before, after, goto }) => {
               className="feed-button"
               onClick={() => goto('open-position')}
             >
-              Open positions
+              Positions
             </button>
           )}
           {!!video && <img

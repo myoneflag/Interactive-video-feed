@@ -57,7 +57,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1em;
+  padding: 1em .5em;
   display: flex;
   align-items: center;
 }
@@ -86,7 +86,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1em;
+  padding: 1em .5em;
   display: flex;
   align-items: center;
 }
@@ -94,10 +94,10 @@
 .top-section .block-action .feed-button {
   background-color: transparent;
   min-height: 36px;
-  padding: 0.2em 1em;
+  padding: 0.2em .5em;
   border: 1px solid white;
   border-radius: .5em;
-  margin-right: 1em;
+  margin-right: .5em;
 }
 
 .top-section .block-action .mute {

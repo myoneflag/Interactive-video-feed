@@ -100,7 +100,6 @@ const FeedItem = ({ data, before, after, goto }) => {
           <img
             src={`/images/logo.png`}
             className="logo"
-            role="button"
             width={40}
             height="auto"
             alt="logo"

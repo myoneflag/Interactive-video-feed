@@ -10,7 +10,6 @@ const VideoFeed = () => {
   const [beforeIndex, setBeforeIndex] = useState(initialSlide)
   const [AfterIndex, setAfterIndex] = useState(initialSlide)
   const [swipe, setSwipe] = useState(true)
-  const [slidesToScroll, setSlidesToScroll] = useState(1)
 
   const settings = {
     initialSlide,
@@ -18,6 +17,7 @@ const VideoFeed = () => {
     speed: 1400,
     infinite: false,
     slidesToShow: 1,
+    slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     adaptiveHeight: true,
@@ -28,15 +28,10 @@ const VideoFeed = () => {
   const goto = (blockId) => {
     try {
       const index = config.findIndex((block) => block.block_key === blockId)
-      console.log(index)
       if (index < 0) {
         slider.current.slickGoTo(beforeIndex + 1)
       } else {
-        if (index - AfterIndex > 1) {
-          setSlidesToScroll(index - AfterIndex)
-        } else {
-          slider.current.slickGoTo(index)
-        }
+        slider.current.slickGoTo(index)
       }
     } catch (err) {
       console.log(err)
@@ -47,19 +42,8 @@ const VideoFeed = () => {
     setSwipe(!config[AfterIndex]?.buttons?.length)
   }, [AfterIndex])
 
-  useEffect(() => {
-    if (slidesToScroll > 1) {
-      slider.current.slickGoTo(AfterIndex + slidesToScroll - 1)
-      // setTimeout(() => {
-      //   setSlidesToScroll(1)
-      // })
-    } else {
-
-    }
-  }, [slidesToScroll])
-
   return (
-    <Slider ref={slider} {...settings} swipe={swipe} slidesToScroll={slidesToScroll}>
+    <Slider ref={slider} {...settings} swipe={swipe}>
       {config.map((item, index) => (
         <FeedItem
           data={item}         

@@ -15,26 +15,6 @@ code {
 }
 
 @font-face{
-  font-family: "Adine";
-  src: url("./assets/fonts/Adine\ Kirnberg.ttf") format("truetype");
-}
-
-@font-face{
-  font-family: "Adine Alternate";
-  src: url("./assets/fonts/AdineKirnberg-Alternate.ttf") format("truetype");
-}
-
-@font-face{
-  font-family: "Billy Argel";
-  src: url("./assets/fonts/Billy\ Argel\ Font.ttf") format("truetype");
-}
-
-@font-face{
-  font-family: "Bird Paradise";
-  src: url("./assets/fonts/BirdsOfParadisePersonalUseOnly.ttf") format("truetype");
-}
-
-@font-face{
   font-family: "Assistant Regular";
   src: url("./assets/fonts/assistant.regular.ttf") format("truetype");
 }
